@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import WorkHistory from "@/model/workHistory";
 import { format } from "date-fns";
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ const defaultColor = "#bfdbfe";
 const activeColor = "#2563eb";
 
 const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
+  const ref = useRef<HTMLDivElement>(null);
   const { state, motionProps, open, close } = useCollapseStates({
     initialMotionProps: {
       dot: { initial: { backgroundColor: defaultColor } },
@@ -26,6 +27,9 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
           state === "opening"
             ? { rotate: 90, backgroundColor: activeColor }
             : { rotate: 0, backgroundColor: defaultColor },
+        onAnimationComplete: () =>
+          state === "opening" &&
+          ref.current?.scrollIntoView({ behavior: "smooth", block: "center" }),
       },
       text: {
         initial:
@@ -62,6 +66,7 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
       onClick={() => setCurrentId(props.history.id)}
     >
       <motion.div
+        ref={ref}
         {...motionProps?.dot}
         className={`flex items-center justify-center rounded-full text-white ${dotSize} ${state === "closed" ? "group-hover:!bg-blue-300" : ""}`}
       >
