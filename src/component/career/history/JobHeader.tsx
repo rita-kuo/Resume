@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import WorkHistory from "@/model/workHistory";
 import { format } from "date-fns";
-import { IoChevronUp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useWorkHistory } from "@/component/career/history/WorkHistoryContext";
 import { useCollapseStates } from "@/hook/useCollapseState";
+import { IoPlay } from "react-icons/io5";
 
 const dotSize = "h-5 w-5 md:h-6 md:w-6";
 const defaultColor = "#bfdbfe";
@@ -21,10 +21,10 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
         initial:
           state === "opening"
             ? { rotate: 0, backgroundColor: defaultColor }
-            : { rotate: 180, backgroundColor: activeColor },
+            : { rotate: 90, backgroundColor: activeColor },
         animate:
           state === "opening"
-            ? { rotate: 180, backgroundColor: activeColor }
+            ? { rotate: 90, backgroundColor: activeColor }
             : { rotate: 0, backgroundColor: defaultColor },
       },
       text: {
@@ -65,8 +65,9 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
         {...motionProps?.dot}
         className={`flex items-center justify-center rounded-full text-white ${dotSize} ${state === "closed" ? "group-hover:!bg-blue-300" : ""}`}
       >
-        <IoChevronUp />
+        <IoPlay className="h-3 w-3 md:h-4 md:w-4" />
       </motion.div>
+
       <motion.h3
         {...motionProps?.text}
         className={`space-x-2 [&>*]:align-middle ${state === "closed" ? "group-hover:!text-blue-300" : ""}`}
