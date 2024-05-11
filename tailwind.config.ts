@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+const sizes = {
+  2.25: "0.5625rem",
+  2.75: "0.6875rem",
+  3.25: "0.8125rem",
+};
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +14,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      margin: { ...sizes },
+      padding: { ...sizes },
+      inset: { ...sizes },
       maxWidth: {
         limit: "1200px",
       },
