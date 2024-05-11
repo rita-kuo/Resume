@@ -40,7 +40,7 @@ export default function Home() {
         Work History
       </h2>
       <div className="relative pt-4">
-        <div className="absolute bottom-0 left-2.25 top-0 -z-10 mb-1 border-l-2 border-blue-300 md:left-2.75" />
+        <div className="absolute bottom-0 left-2.25 top-0 -z-10 border-l-2 border-blue-300 md:left-2.75" />
         <WorkHistoryProvider histories={data}>
           <div className="space-y-2 md:space-y-4">
             {data.map((history, index) => (

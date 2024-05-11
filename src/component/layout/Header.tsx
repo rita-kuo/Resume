@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import useBreakPoint from "@/hook/useBreakPoint";
+import MenuButton from "@/component/layout/MenuButton";
 
 const Header: React.FC = () => {
   const device = useBreakPoint();
@@ -37,6 +38,7 @@ const Header: React.FC = () => {
     >
       <div className="mx-auto flex w-full max-w-limit items-end justify-between">
         <h1 className="text-sky-800">Rita, the Engineer</h1>
+        <MenuButton />
       </div>
     </motion.header>
   );

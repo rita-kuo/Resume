@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/layout/Header";
-import Menu from "@/component/layout/Menu";
+import MenuContent from "@/component/layout/MenuContent";
 import Information from "@/component/Information";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,7 +26,7 @@ export default function RootLayout({
         <div className="mx-auto w-full max-w-limit gap-10 p-4 md:flex">
           <aside className="md:top-23 sticky top-16 hidden h-max basis-1/5 space-y-4 md:block">
             <Information />
-            <Menu />
+            <MenuContent />
           </aside>
           <main className="relative md:basis-4/5">{children}</main>
         </div>

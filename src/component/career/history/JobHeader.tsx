@@ -62,7 +62,7 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
 
   return (
     <button
-      className="group flex items-center gap-4 text-sky-600 hover:text-sky-500"
+      className="group flex items-end gap-4 text-sky-600 hover:text-sky-500"
       onClick={() => setCurrentId(props.history.id)}
     >
       <motion.div
@@ -75,7 +75,7 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
 
       <motion.h3
         {...motionProps?.text}
-        className={`space-x-2 [&>*]:align-middle ${state === "closed" ? "group-hover:!text-blue-300" : ""}`}
+        className={`space-x-2 [&>*]:align-baseline ${state === "closed" ? "group-hover:!text-blue-300" : ""}`}
       >
         <span className="text-sm font-medium">{`${from} - ${to}`}</span>
         <span>{props.history.company}</span>
