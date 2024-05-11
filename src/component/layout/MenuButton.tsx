@@ -41,7 +41,7 @@ const MenuButton: React.FC = () => {
         <motion.div
           {...motionProps.menu}
           transition={{ type: "linear" }}
-          className="absolute right-0 top-0 ml-auto h-full w-1/2 rounded-l bg-white p-4"
+          className="absolute right-0 top-0 ml-auto h-full w-3/5 rounded-l bg-white px-6 py-4"
         >
           <Information />
           <MenuContent onClick={close} />
