@@ -28,9 +28,11 @@ export const useCollapseStates = (
 
       const keys = Object.keys(motionProps);
       if (keys[0]) {
+        const onAnimationComplete = motionProps[keys[0]].onAnimationComplete;
         motionProps[keys[0]] = {
           ...motionProps[keys[0]],
-          onAnimationComplete: () => {
+          onAnimationComplete: (definition) => {
+            onAnimationComplete?.(definition);
             setState((state) =>
               state.includes("ing")
                 ? state === "opening"
