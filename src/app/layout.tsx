@@ -20,15 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`min-h-screen ${inter.className}`}>
         <Header />
-        <div className="p-4 pb-0 md:hidden">
-          <Information />
-        </div>
-        <div className="mx-auto w-full max-w-limit gap-10 p-4 md:flex">
-          <aside className="md:top-23 sticky top-16 hidden h-max basis-1/5 space-y-4 md:block">
+        <div className="mx-auto w-full max-w-limit items-start gap-10 md:flex">
+          <aside className="sticky hidden min-h-max basis-1/5 space-y-4 md:block">
             <Information />
             <MenuContent />
           </aside>
-          <main className="relative md:basis-4/5">{children}</main>
+          <main className="relative py-4 md:basis-4/5">{children}</main>
         </div>
       </body>
     </html>

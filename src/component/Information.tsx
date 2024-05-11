@@ -5,8 +5,8 @@ import { IoMailOutline } from "react-icons/io5";
 
 const Information: React.FC = () => {
   return (
-    <div className="flex gap-6 md:flex-col md:gap-4">
-      <div className="relative basis-1/4 pt-[25%] md:w-full md:pt-[100%]">
+    <div className="space-y-2 p-4 md:space-y-4">
+      <div className="relative w-full pt-[100%]">
         <Image
           src="/avatar.jpg"
           alt="avatar"
@@ -15,13 +15,11 @@ const Information: React.FC = () => {
           style={{ objectFit: "cover", objectPosition: "top" }}
         />
       </div>
-      <div className="space-y-2 md:space-y-4">
-        <h1 className="basis-4/4 text-center">Rita Kuo</h1>
-        <div className="flex gap-1 md:justify-center [&>svg]:h-5 [&>svg]:w-5 [&>svg]:md:h-6 [&>svg]:md:w-6">
-          <IoLogoLinkedin />
-          <IoLogoGithub />
-          <IoMailOutline />
-        </div>
+      <h1 className="text-center">Rita Kuo</h1>
+      <div className="flex justify-center gap-1 [&>svg]:h-5 [&>svg]:w-5 [&>svg]:md:h-6 [&>svg]:md:w-6">
+        <IoLogoLinkedin />
+        <IoLogoGithub />
+        <IoMailOutline />
       </div>
     </div>
   );
