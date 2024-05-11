@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import WorkHistory from "@/model/workHistory";
 import { useWorkHistory } from "@/component/career/history/WorkHistoryContext";
 import { useCollapseState } from "@/hook/useCollapseState";
+import Markdown from "react-markdown";
 
 const JobContent: React.FC<{ history: WorkHistory }> = (props) => {
   const { state, close, open, motionProps } = useCollapseState({
@@ -20,7 +21,23 @@ const JobContent: React.FC<{ history: WorkHistory }> = (props) => {
   });
 
   return (
-    <motion.div {...motionProps} className="ml-10 overflow-hidden"></motion.div>
+    <motion.div {...motionProps} className="ml-10 overflow-hidden">
+      {props.history.detail.map((detail) => (
+        <div key={detail.title} className="mt-1 md:mt-2">
+          <h4>{detail.title}</h4>
+          <Markdown
+            className="ml-4 text-sm"
+            components={{
+              ul: ({ children }) => (
+                <ul className="ml-4 list-disc">{children}</ul>
+              ),
+            }}
+          >
+            {detail.description}
+          </Markdown>
+        </div>
+      ))}
+    </motion.div>
   );
 };
 
