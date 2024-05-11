@@ -1,6 +1,8 @@
 import {
   createContext,
+  Dispatch,
   PropsWithChildren,
+  SetStateAction,
   useContext,
   useEffect,
   useRef,
@@ -10,8 +12,8 @@ import WorkHistory from "@/model/workHistory";
 import { CollapseState } from "@/hook/useCollapseState";
 
 const WorkHistoryContext = createContext<{
-  currentId: number;
-  setCurrentId: (id: number) => void;
+  currentId?: number;
+  setCurrentId: Dispatch<SetStateAction<number | undefined>>;
 }>({
   currentId: 0,
   setCurrentId: () => {},
@@ -20,7 +22,9 @@ const WorkHistoryContext = createContext<{
 export const WorkHistoryProvider: React.FC<
   PropsWithChildren<{ histories: WorkHistory[] }>
 > = (props) => {
-  const [currentId, setCurrentId] = useState<number>(props.histories[0]?.id);
+  const [currentId, setCurrentId] = useState<number | undefined>(
+    props.histories[0]?.id,
+  );
   return (
     <WorkHistoryContext.Provider value={{ currentId, setCurrentId }}>
       {props.children}

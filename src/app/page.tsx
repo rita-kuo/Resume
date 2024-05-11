@@ -25,7 +25,16 @@ const workHistory: WorkHistory[] = [
     id: 2,
     from: new Date("2020-01-01"),
     company: "Company B",
-    detail: [],
+    detail: [
+      {
+        title: "Software Engineer",
+        description: "Developed a web application.\n- Frontend\n- Backend",
+      },
+      {
+        title: "Software Engineer",
+        description: "Developed a web application.\n- Frontend\n- Backend",
+      },
+    ],
   },
 ];
 
