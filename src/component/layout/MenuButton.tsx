@@ -3,6 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useCollapseStates } from "@/hook/useCollapseState";
 import MenuContent from "@/component/layout/MenuContent";
+import Information from "@/component/Information";
 
 const MenuButton: React.FC = () => {
   const { state, open, close, motionProps } = useCollapseStates({
@@ -16,8 +17,8 @@ const MenuButton: React.FC = () => {
         animate: { opacity: state === "opening" ? 1 : 0 },
       },
       menu: {
-        initial: { translateX: state === "opening" ? "100%" : 0 },
-        animate: { translateX: state === "opening" ? 0 : "100%" },
+        initial: { translateX: state === "opening" ? "100%" : "0px" },
+        animate: { translateX: state === "opening" ? "0px" : "100%" },
       },
     }),
   });
@@ -29,22 +30,22 @@ const MenuButton: React.FC = () => {
       >
         <IoMenu className="h-full w-full" />
       </button>
-      {state !== "closed" && (
-        <motion.div
-          {...motionProps.mask}
-          id="mask"
-          className="fixed left-0 top-0 h-full w-full bg-black/50"
-          onClick={(event) =>
-            (event.target as HTMLElement).id === "mask" && close()
-          }
-        ></motion.div>
-      )}
       <motion.div
-        {...motionProps.menu}
-        transition={{ type: "linear" }}
-        className="absolute right-0 top-0 ml-auto h-screen w-1/2 rounded-l bg-white p-4"
+        {...motionProps.mask}
+        id="mask"
+        className={`fixed left-0 top-0 h-full w-full bg-black/50 ${state === "closed" ? "hidden" : ""}`}
+        onClick={(event) =>
+          (event.target as HTMLElement).id === "mask" && close()
+        }
       >
-        <MenuContent onClick={close} />
+        <motion.div
+          {...motionProps.menu}
+          transition={{ type: "linear" }}
+          className="absolute right-0 top-0 ml-auto h-full w-1/2 rounded-l bg-white p-4"
+        >
+          <Information />
+          <MenuContent onClick={close} />
+        </motion.div>
       </motion.div>
     </div>
   );
