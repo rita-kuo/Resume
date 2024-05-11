@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           })}
       className="sticky top-0 z-10 flex w-full bg-sky-100 p-4 shadow"
     >
-      <div className="mx-auto flex w-full max-w-limit items-end justify-between">
+      <div className="max-w-limit-lg mx-auto flex w-full items-end justify-between">
         <h1 className="text-sky-800">Rita, the Engineer</h1>
         <MenuButton />
       </div>

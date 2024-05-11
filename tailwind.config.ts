@@ -19,7 +19,8 @@ const config: Config = {
       padding: { ...sizes },
       inset: { ...sizes },
       maxWidth: {
-        limit: "1200px",
+        limit: "960px",
+        ["limit-lg"]: "1200px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
