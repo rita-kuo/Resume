@@ -35,8 +35,8 @@ export default function Home() {
   );
 
   return (
-    <div className="px-4">
-      <h2 className="border-b-2 border-blue-300 p-3 text-center">
+    <>
+      <h2 className="border-b-2 border-blue-300 pb-4 text-center">
         Work History
       </h2>
       <div className="relative pt-4">
@@ -49,6 +49,6 @@ export default function Home() {
           </div>
         </WorkHistoryProvider>
       </div>
-    </div>
+    </>
   );
 }
