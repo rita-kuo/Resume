@@ -25,7 +25,7 @@ const MenuButton: React.FC = () => {
   return (
     <div className="h-full md:hidden">
       <button
-        className="flex aspect-square h-full items-center rounded border border-blue-900 bg-white p-1 hover:bg-blue-200 active:bg-blue-300"
+        className="flex aspect-square h-full items-center rounded bg-rose-300 p-1 text-white active:bg-rose-400"
         onClick={open}
       >
         <IoMenu className="h-full w-full" />
