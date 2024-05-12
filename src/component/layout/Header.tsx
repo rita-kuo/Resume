@@ -4,8 +4,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import useBreakPoint from "@/hook/useBreakPoint";
 import MenuButton from "@/component/layout/MenuButton";
+import { useTranslations } from "next-intl";
+import { HeaderLocaleSelector } from "@/component/LocaleSelector";
 
 const Header: React.FC = () => {
+  const t = useTranslations("Layout");
   const device = useBreakPoint();
 
   const ref = useRef<HTMLDivElement>(null);
@@ -38,10 +41,14 @@ const Header: React.FC = () => {
     >
       <div className="max-w-limit-lg mx-auto flex w-full items-end justify-between">
         <span className="space-x-1 md:space-x-2 [&>*]:inline">
-          <h1 className="text-sky-800">Resume</h1>
-          <span>2024/05</span>
+          <h1 className="text-sky-800">{t("title")}</h1>
+          <span>{process.env.NEXT_PUBLIC_VERSION}</span>
         </span>
+
         <MenuButton />
+        <div className="hidden h-1/2 md:block">
+          <HeaderLocaleSelector />
+        </div>
       </div>
     </motion.header>
   );

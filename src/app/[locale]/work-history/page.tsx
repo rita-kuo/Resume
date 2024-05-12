@@ -12,11 +12,11 @@ const workHistory: WorkHistory[] = [
     company: "Company A",
     detail: [
       {
-        title: "Software Engineer",
+        title: "Software Engineer1",
         description: "Developed a web application.\n- Frontend\n- Backend",
       },
       {
-        title: "Software Engineer",
+        title: "Software Engineer2",
         description: "Developed a web application.\n- Frontend\n- Backend",
       },
     ],
@@ -27,11 +27,11 @@ const workHistory: WorkHistory[] = [
     company: "Company B",
     detail: [
       {
-        title: "Software Engineer",
+        title: "Software Engineer3",
         description: "Developed a web application.\n- Frontend\n- Backend",
       },
       {
-        title: "Software Engineer",
+        title: "Software Engineer4",
         description: "Developed a web application.\n- Frontend\n- Backend",
       },
     ],
@@ -45,9 +45,6 @@ export default function Home() {
 
   return (
     <>
-      <h2 className="border-b-2 border-blue-300 pb-4 text-center text-sky-600">
-        Work History
-      </h2>
       <div className="relative pt-4">
         <div className="absolute bottom-0 left-2.25 top-0 -z-10 border-l-2 border-blue-300 md:left-2.75" />
         <WorkHistoryProvider histories={data}>

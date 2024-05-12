@@ -1,8 +1,9 @@
 import React from "react";
-import { IoMenu } from "react-icons/io5";
+import { IoLanguage, IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useCollapseStates } from "@/hook/useCollapseState";
 import MenuContent from "@/component/layout/MenuContent";
+import { HeaderLocaleSelector } from "@/component/LocaleSelector";
 
 const MenuButton: React.FC = () => {
   const { state, open, close, motionProps } = useCollapseStates({
@@ -40,8 +41,12 @@ const MenuButton: React.FC = () => {
         <motion.div
           {...motionProps.menu}
           transition={{ type: "linear" }}
-          className="absolute right-0 top-0 ml-auto h-full w-3/5 rounded-l bg-white px-6 py-4"
+          className="absolute right-0 top-0 ml-auto h-full w-3/5 space-y-6 rounded-l bg-white p-6 [&>*+*]:border-t [&>*+*]:pt-6"
         >
+          <div className="flex justify-between">
+            <IoLanguage className="h-5 w-5" />
+            <HeaderLocaleSelector />
+          </div>
           <MenuContent onClick={close} />
         </motion.div>
       </motion.div>

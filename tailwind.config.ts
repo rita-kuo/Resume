@@ -4,7 +4,7 @@ const sizes = {
   2.25: "0.5625rem",
   2.75: "0.6875rem",
   3.25: "0.8125rem",
-  23: "5.75rem",
+  17: "4.25rem",
 };
 
 const config: Config = {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { IoMailOutline } from "react-icons/io5";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const IconLink: React.FC<PropsWithChildren<{ href: string }>> = (props) => (
   <Link
@@ -15,8 +16,9 @@ const IconLink: React.FC<PropsWithChildren<{ href: string }>> = (props) => (
 );
 
 const Information: React.FC = () => {
+  const t = useTranslations("Layout");
   return (
-    <div className="flex items-center gap-6 space-y-2 p-4 pb-0 md:block md:space-y-4 md:p-4">
+    <div className="flex items-center gap-6 space-y-2 p-4 pb-0 md:block md:space-y-4 md:p-0">
       <div className="relative basis-[30%] pt-[30%] md:w-full md:pt-[100%]">
         <Image
           src="/avatar.jpg"
@@ -27,7 +29,7 @@ const Information: React.FC = () => {
         />
       </div>
       <div className="md:space-y-4">
-        <h1 className="text-center">Rita Kuo</h1>
+        <h1 className="text-center">{t("name")}</h1>
         <div className="flex gap-2 md:justify-center">
           <IconLink href="https://www.linkedin.com/in/rita-tn-kuo/">
             <IoLogoLinkedin />
