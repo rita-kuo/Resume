@@ -23,7 +23,7 @@ export const WorkHistoryProvider: React.FC<
   PropsWithChildren<{ histories: WorkHistory[] }>
 > = (props) => {
   const [currentId, setCurrentId] = useState<number | undefined>(
-    props.histories[0]?.id,
+    props.histories[props.histories.length - 1]?.id,
   );
   return (
     <WorkHistoryContext.Provider value={{ currentId, setCurrentId }}>

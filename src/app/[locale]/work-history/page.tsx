@@ -40,7 +40,7 @@ const workHistory: WorkHistory[] = [
 
 export default function Home() {
   const data = workHistory.sort((prev, curr) =>
-    prev.from > curr.from ? -1 : 1,
+    prev.from < curr.from ? -1 : 1,
   );
 
   return (
