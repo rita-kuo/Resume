@@ -16,8 +16,8 @@ const IconLink: React.FC<PropsWithChildren<{ href: string }>> = (props) => (
 
 const Information: React.FC = () => {
   return (
-    <div className="space-y-2 p-4 md:space-y-4">
-      <div className="relative w-full pt-[100%]">
+    <div className="flex items-center gap-6 space-y-2 p-4 pb-0 md:block md:space-y-4 md:p-4">
+      <div className="relative basis-[30%] pt-[30%] md:w-full md:pt-[100%]">
         <Image
           src="/avatar.jpg"
           alt="avatar"
@@ -26,17 +26,19 @@ const Information: React.FC = () => {
           style={{ objectFit: "cover", objectPosition: "top" }}
         />
       </div>
-      <h1 className="text-center">Rita Kuo</h1>
-      <div className="flex justify-center gap-2">
-        <IconLink href="https://www.linkedin.com/in/rita-tn-kuo/">
-          <IoLogoLinkedin />
-        </IconLink>
-        <IconLink href="https://github.com/rita-kuo">
-          <IoLogoGithub />
-        </IconLink>
-        <IconLink href="mailto:coco6224@gmail.com">
-          <IoMailOutline />
-        </IconLink>
+      <div className="md:space-y-4">
+        <h1 className="text-center">Rita Kuo</h1>
+        <div className="flex gap-2 md:justify-center">
+          <IconLink href="https://www.linkedin.com/in/rita-tn-kuo/">
+            <IoLogoLinkedin />
+          </IconLink>
+          <IconLink href="https://github.com/rita-kuo">
+            <IoLogoGithub />
+          </IconLink>
+          <IconLink href="mailto:coco6224@gmail.com">
+            <IoMailOutline />
+          </IconLink>
+        </div>
       </div>
     </div>
   );

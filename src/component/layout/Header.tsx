@@ -37,7 +37,10 @@ const Header: React.FC = () => {
       className="sticky top-0 z-10 flex w-full bg-sky-100 p-4 shadow"
     >
       <div className="max-w-limit-lg mx-auto flex w-full items-end justify-between">
-        <h1 className="text-sky-800">Rita, the Engineer</h1>
+        <span className="space-x-1 md:space-x-2 [&>*]:inline">
+          <h1 className="text-sky-800">Resume</h1>
+          <span>2024/05</span>
+        </span>
         <MenuButton />
       </div>
     </motion.header>

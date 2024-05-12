@@ -3,7 +3,6 @@ import { IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useCollapseStates } from "@/hook/useCollapseState";
 import MenuContent from "@/component/layout/MenuContent";
-import Information from "@/component/Information";
 
 const MenuButton: React.FC = () => {
   const { state, open, close, motionProps } = useCollapseStates({
@@ -43,7 +42,6 @@ const MenuButton: React.FC = () => {
           transition={{ type: "linear" }}
           className="absolute right-0 top-0 ml-auto h-full w-3/5 rounded-l bg-white px-6 py-4"
         >
-          <Information />
           <MenuContent onClick={close} />
         </motion.div>
       </motion.div>
