@@ -34,7 +34,7 @@ const JobContent: React.FC<{ history: WorkHistory }> = (props) => {
       <div className="space-y-2 p-2 md:space-y-4 md:p-4">
         {props.history.detail.map((detail) => (
           <div key={detail.title} className="space-y-1">
-            <h4>{detail.title}</h4>
+            <h4 className="text-sky-600">{detail.title}</h4>
             <Markdown
               className="ml-4 text-sm"
               components={{

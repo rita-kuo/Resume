@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <h2 className="border-b-2 border-blue-300 pb-4 text-center">
+      <h2 className="border-b-2 border-blue-300 pb-4 text-center text-sky-600">
         Work History
       </h2>
       <div className="relative pt-4">

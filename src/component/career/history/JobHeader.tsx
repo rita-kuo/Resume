@@ -8,7 +8,7 @@ import { IoPlay } from "react-icons/io5";
 
 const dotSize = "h-5 w-5 md:h-6 md:w-6";
 const defaultColor = "#bfdbfe";
-const activeColor = "#2563eb";
+const activeColor = "#fb7185";
 
 const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +62,7 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
 
   return (
     <button
-      className="group flex items-end gap-4 text-sky-600 hover:text-sky-500"
+      className="group flex items-end gap-4"
       onClick={() =>
         setCurrentId((current) =>
           current === props.history.id ? undefined : props.history.id,
