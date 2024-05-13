@@ -64,10 +64,10 @@ const Page = () => {
                 <h3>{education.title}</h3>
             </div>
         </div>
-        <div>
+        <div className='space-y-1'>
             <span className='text-teal-600'>{education.project.subtitle}</span>
             <h2>{education.project.title}</h2>
-            <p>{education.project.description}</p>
+            <p className='text-sm'>{education.project.description}</p>
         </div>
         <div ref={ref} className='relative w-full aspect-video rounded-lg overflow-hidden'>
             <Image src='/project-before.png' alt='before' fill className='-z-10'/>
