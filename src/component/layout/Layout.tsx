@@ -22,7 +22,7 @@ const Layout: React.FC<PropsWithChildren> = (props) => {
                     <Information/>
                     <MenuContent/>
                 </aside>
-                <main className="relative py-2 md:py-4 md:basis-4/5">
+                <main className="relative py-2 md:py-4 md:basis-4/5 max-w-full overflow-x-hidden">
                     <h2 className="border-b-2 border-blue-300 pb-2 md:pb-4 text-center text-sky-600">
                         {t(pathname.slice(1).replace("/", "."))}
                     </h2>

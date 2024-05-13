@@ -8,7 +8,7 @@ import {IoPlay} from "react-icons/io5";
 
 const dotSize = "h-5 w-5 md:h-6 md:w-6";
 const defaultColor = "#bfdbfe";
-const activeColor = "#2dd4bf";
+const activeColor = "#0d9488";
 
 const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
     const ref = useRef<HTMLDivElement>(null);

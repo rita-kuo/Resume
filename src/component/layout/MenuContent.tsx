@@ -14,8 +14,8 @@ const MenuContent: React.FC<{ onClick?: () => void }> = (props) => {
                 const isCurrent = currentPathname.startsWith(`/${pathname}`);
                 return isCurrent ? (
                     <>
-                        <BiCheck className="h-6 w-6 text-teal-400"/>
-                        <span className="cursor-default font-bold text-teal-400">
+                        <BiCheck className="h-6 w-6 text-teal-600"/>
+                        <span className="cursor-default font-bold text-teal-600">
               {t(pathname)}
             </span>
                     </>
