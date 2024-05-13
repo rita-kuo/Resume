@@ -53,7 +53,7 @@ const Page = () => {
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ["center center", "start 15%"]
+        offset: ["center 55%", "start 20%"]
     })
 
     return <div className='space-y-4'>
