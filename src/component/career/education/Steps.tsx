@@ -16,8 +16,10 @@ const Step: React.FC<StepProps> = props => {
                 {props.title}
             </h4>
             {props.skill &&
-                <ul className='ml-10 list-disc md:ml-6 md:list-none space-y-1'>{props.skill.map(skill =>
-                    <li>{skill}</li>)}</ul>}
+                <ul className='ml-10 list-disc md:ml-6 md:list-none space-y-1'>
+                    {props.skill.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
+            }
         </span>
         <div className='md:col-start-2 md:col-span-3 ml-4 md:ml-0 space-y-2'>
             {props.image.map(src =>

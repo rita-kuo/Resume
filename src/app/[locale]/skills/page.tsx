@@ -13,7 +13,7 @@ interface Skill {
 const Page = async ({params: {locale}}: BasePageProps) => {
     const skills = await getData<Skill[]>('skills', locale)
     return <div className='space-y-4 divide-y-2 [&>*]:pt-4'>
-        {skills?.map(skill => <div className='space-y-2'>
+        {skills?.map(skill => <div key={skill.title} className='space-y-2'>
             <div className='flex flex-col md:flex-row md:items-end gap-x-4'>
                 <h2>{skill.title}</h2>
                 <span
