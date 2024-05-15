@@ -64,7 +64,7 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
 
     return (
         <button
-            className="group flex items-end gap-4"
+            className="group flex items-center gap-4"
             onClick={() =>
                 setCurrentId((current) =>
                     current === props.history.id ? undefined : props.history.id,
@@ -74,18 +74,18 @@ const JobHeader: React.FC<{ history: WorkHistory }> = (props) => {
             <motion.div
                 ref={ref}
                 {...motionProps?.dot}
-                className={`flex items-center justify-center rounded-full text-white ${dotSize} ${state === "closed" ? "group-hover:!bg-blue-300" : ""}`}
+                className={`flex items-center justify-center min-w-5 rounded-full text-white ${dotSize} ${state === "closed" ? "group-hover:!bg-blue-300" : ""}`}
             >
                 <IoPlay className="h-3 w-3 md:h-4 md:w-4"/>
             </motion.div>
 
-            <motion.h3
+            <motion.span
                 {...motionProps?.text}
-                className={`space-x-2 [&>*]:align-baseline ${state === "closed" ? "group-hover:!text-blue-300" : ""}`}
+                className={`text-left [&>*]:align-baseline ${state === "closed" ? "group-hover:!text-blue-300" : ""}`}
             >
                 <span className="text-sm font-medium">{`${from} - ${to}`}</span>
-                <span>{props.history.company}</span>
-            </motion.h3>
+                <h3>{props.history.company}</h3>
+            </motion.span>
         </button>
     );
 };

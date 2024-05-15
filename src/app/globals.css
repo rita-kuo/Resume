@@ -21,3 +21,7 @@ h3 {
 h4 {
     @apply text-base font-bold;
 }
+
+button {
+    @apply outline-none;
+}

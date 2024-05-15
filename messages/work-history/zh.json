@@ -1,32 +1,51 @@
 [
   {
     "id": 1,
-    "from": "2019-01-01T00:00:00.000Z",
-    "to": "2020-01-01T00:00:00.000Z",
-    "company": "Company A",
+    "from": "2018-07-01T00:00:00.000Z",
+    "to": "2019-03-01T00:00:00.000Z",
+    "company": "CBX Software (TradeBeyond)",
     "detail": [
       {
-        "title": "Software Engineer1",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
-      },
-      {
-        "title": "Software Engineer2",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "實習生",
+        "description": "# [TradeBeyond](https://tradebeyond.com)\n**TypeScript (Angular) | Java (Spring) | MongoDB**   \n- 開發零售產品交流、訂購平台\n- 任務以功能拆分，同時負責前台畫面及後台 API\n- 採用 Scrum 敏捷開發\n- 養成可維護性高的開發習慣\n- 使用 gitLab，MR 至少需要 2 個 approval"
       }
     ]
   },
   {
     "id": 2,
     "from": "2020-01-01T00:00:00.000Z",
-    "company": "Company B",
+    "to": "2023-05-01T00:00:00.000Z",
+    "company": "叡揚資訊",
     "detail": [
       {
-        "title": "Software Engineer3",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "助理程式設計師",
+        "from": "2019-03-01T00:00:00.000Z",
+        "to": "2019-06-01T00:00:00.000Z",
+        "description": "# 新人訓練   \n為期 3 週的 JS、.NET MVC、後端測試、CI/CD 課程\n# 聊天機器人專案開發\n**C# (.Net) | MS SQL Server**\n- 使用 Microsoft Bot Framework SDK 進行開發\n- 介接 JIRA API 實作 Issue 查詢、委派、留言等功能。\n- 介接客戶內部服務，實現網頁曹做行動化\n- 使用套件將圖片中的 QR code解碼，傳送至指定API\n- 與其他團隊合作，傳送定位至指定 API，實作打卡功能"
       },
       {
-        "title": "Software Engineer4",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "程式設計師",
+        "from": "2019-06-01T00:00:00.000Z",
+        "to": "2020-08-01T00:00:00.000Z"
+      },
+      {
+        "title": "程式分析師",
+        "from": "2020-08-01T00:00:00.000Z",
+        "to": "2023-05-01T00:00:00.000Z",
+        "description": "# [iota C.ai 對話服務平台開發](https://www.gss.com.tw/iota)\n**TypeScript (React) | C# (.Net) | PostgreSQL & MS SQL Server | Azure ｜Jenkins**\n- 開發結構式問答設計模組，方便使用者基於結構化的資料的建立問答，同時針對提問者提供流程化的查詢結果。\n- 開發即時對話模組，實現真人透過機器人的身份進行即時線上客服。\n- 建立整合訓練機制，透過提升訓練資料管理及調教的便利性，以減少資訊不全所致的錯誤回覆，提升 NLU 30% 準確率。\n- 建立前端共用元件及基本功能專案，提升相關服務介面開發效率及畫面一致性。"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "from": "2020-01-01T00:00:00.000Z",
+    "company": "絕地軟體",
+    "detail": [
+      {
+        "title": "工程師",
+        "from": "2019-03-01T00:00:00.000Z",
+        "to": "2019-06-01T00:00:00.000Z",
+        "description": "# 工作內容\n- 網頁前端開發\n- 定義 API 規格及部分資料庫設計\n- 與 UX 設計師共同討論，設計流程\n- 部分桌面版 UI 設計\n- Github Workflow CI/CD\n# [U19 籃球聯盟官網](https://u19.com/)、[信義籃球聯盟官網](https://www.xbl.tw/)\n**Typescript (React, Next) | Tailwind | Framer Motion**\n- 引入 Design System 統一元件樣式\n- 重構原程式碼，提取共用元件、方法，拆分檔案\n- 串接 Tap Pay，實作活動報名線上付款\n- 使用 Google reCapcha 防止機器人填寫問卷\n- 建立 local storage context，避免頁面切換時需等候重新載入\n- 針對常見的兩狀態切換動畫，建立 hook 紀錄狀態、切換設定，縮短開發時間\n- 使用同一個 Repository 部署兩個網站，根據環境變數採用客製化元件或 rewrite / redirect\n- 部分頁面實作 i18n\n# 後台管理系統\n**Typescript (React, Next, Materialized UI Template)**\n- Serverless uploading to AWS S3: 單一檔案分段同步上傳\n- DFS 設定樹狀結構節點路徑\n# 嘗試使用 AWS Bedrock 建立客服機器人\n- 結合 AWS Lambda 針對使用者的指令執行特定方法\n- 學習 Prompt Engineering"
       }
     ]
   }
