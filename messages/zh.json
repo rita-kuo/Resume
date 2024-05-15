@@ -11,6 +11,9 @@
     "education": "學歷",
     "skills": "技能"
   },
+  "Education": {
+    "workflow": "運作流程"
+  },
   "LocaleSelector": {
     "locale": "{locale, select, zh {繁體中文} en {English} other {Unknown}}"
   }

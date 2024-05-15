@@ -11,6 +11,9 @@
     "education": "Education",
     "skills": "Skills"
   },
+  "Education": {
+    "workflow": "Workflow"
+  },
   "LocaleSelector": {
     "locale": "{locale, select, zh {繁體中文} en {English} other {Unknown}}"
   }

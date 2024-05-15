@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import {useTranslations} from "next-intl";
 
 export interface StepProps {
     title: string
@@ -26,8 +27,9 @@ const Step: React.FC<StepProps> = props => {
 }
 
 const Steps: React.FC<{ steps: StepProps[] }> = (props) => {
+    const t = useTranslations('Education')
     return <div className='space-y-2'>
-        <h3>運作流程</h3>
+        <h3>{t('workflow')}</h3>
         <div className='grid md:grid-cols-3 gap-2 md:gap-y-4 ml-2 md:ml-4 border-l-2 border-sky-300'>
             {props.steps.map(step => <Step key={step.title} {...step}/>)}
         </div>
