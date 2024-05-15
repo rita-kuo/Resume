@@ -1,32 +1,51 @@
 [
   {
     "id": 1,
-    "from": "2019-01-01T00:00:00.000Z",
-    "to": "2020-01-01T00:00:00.000Z",
-    "company": "Company A",
+    "from": "2018-07-01T00:00:00.000Z",
+    "to": "2019-03-01T00:00:00.000Z",
+    "company": "CBX Software (TradeBeyond)",
     "detail": [
       {
-        "title": "Software Engineer1",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
-      },
-      {
-        "title": "Software Engineer2",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "Intern",
+        "description": "# [TradeBeyond](https://tradebeyond.com)\n**TypeScript (Angular) | Java (Spring) | MongoDB**   \n- Developed a retail product exchange and ordering platform\n- Tasks divided by functionality, responsible for both frontend and backend API\n- Agile development using Scrum\n- Cultivated high maintainability development habits\n- Used gitLab, MR requires at least 2 approvals"
       }
     ]
   },
   {
     "id": 2,
     "from": "2020-01-01T00:00:00.000Z",
-    "company": "Company B",
+    "to": "2023-05-01T00:00:00.000Z",
+    "company": "Galaxy Software Service",
     "detail": [
       {
-        "title": "Software Engineer3",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "Assistant Programmer",
+        "from": "2019-03-01T00:00:00.000Z",
+        "to": "2019-06-01T00:00:00.000Z",
+        "description": "# New Hire Training   \n3-week courses on JS, .NET MVC, backend testing, CI/CD\n# Chatbot Project Development\n**C# (.Net) | MS SQL Server**\n- Developed using Microsoft Bot Framework SDK\n- Integrated JIRA API for Issue querying, delegation, commenting, etc.\n- Integrated internal services for web-to-mobile conversion\n- Decoded QR codes from images using packages and sent to designated API\n- Collaborated with other teams to send location to specified API for check-in functionality"
       },
       {
-        "title": "Software Engineer4",
-        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+        "title": "Programmer",
+        "from": "2019-06-01T00:00:00.000Z",
+        "to": "2020-08-01T00:00:00.000Z"
+      },
+      {
+        "title": "Program Analyst",
+        "from": "2020-08-01T00:00:00.000Z",
+        "to": "2023-05-01T00:00:00.000Z",
+        "description": "# [iota C.ai Conversational Service Platform](https://www.gss.com.tw/iota)\n**TypeScript (React) | C# (.Net) | PostgreSQL & MS SQL Server | Azure | Jenkins**\n- Developed structured Q&A design module for users to create Q&A based on structured data, providing process-based query results for questioners\n- Developed real-time chat module for human agents to conduct real-time online customer service through bot identity\n- Established integrated training mechanism to improve training data management and tuning convenience, reducing errors due to incomplete information, and improving NLU 30% accuracy\n- Established frontend shared components and basic function projects to improve development efficiency and interface consistency of related services."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "from": "2020-01-01T00:00:00.000Z",
+    "company": "Ultimate Software",
+    "detail": [
+      {
+        "title": "Engineer",
+        "from": "2019-03-01T00:00:00.000Z",
+        "to": "2019-06-01T00:00:00.000Z",
+        "description": "# Job Responsibilities\n- Front-end web development\n- Definition of API specifications and partial database design\n- Discussion with UX designers to design processes\n- Some desktop UI design\n- Github Workflow CI/CD\n# [U19 Basketball League Official Website](https://u19.com/), [Sinyi Basketball League Official Website](https://www.xbl.tw/)\n**Typescript (React, Next) | Tailwind | Framer Motion**\n- Introduced Design System to unify component styles\n- Refactored original code, extracted shared components, methods, and split files\n- Integrated Tap Pay for online payment for event registration\n- Used Google reCapcha to prevent bots from filling out surveys\n- Established local storage context to avoid waiting for reload when switching pages\n- Created hooks for common two-state switching animations to record states and switch settings, reducing development time\n- Deployed two websites using the same Repository, adopting customized components or rewrite/redirect according to environment variables\n- Implemented i18n for some pages\n# Backend Management System\n**Typescript (React, Next, Materialized UI Template)**\n- Serverless uploading to AWS S3: Single file segmented synchronous upload\n- Configure node path in a tree structure by using DFS\n# Attempted to use AWS Bedrock to build a customer service bot\n- Combined AWS Lambda to execute specific methods for user commands\n- Learn Prompt Engineering"
       }
     ]
   }
