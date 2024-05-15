@@ -43,8 +43,6 @@
     "detail": [
       {
         "title": "工程師",
-        "from": "2019-03-01T00:00:00.000Z",
-        "to": "2019-06-01T00:00:00.000Z",
         "description": "# 工作內容\n- 網頁前端開發\n- 定義 API 規格及部分資料庫設計\n- 與 UX 設計師共同討論，設計流程\n- 部分桌面版 UI 設計\n- Github Workflow CI/CD\n# [U19 籃球聯盟官網](https://u19.com/)、[信義籃球聯盟官網](https://www.xbl.tw/)\n**Typescript (React, Next) | Tailwind | Framer Motion**\n- 引入 Design System 統一元件樣式\n- 重構原程式碼，提取共用元件、方法，拆分檔案\n- 串接 Tap Pay，實作活動報名線上付款\n- 使用 Google reCapcha 防止機器人填寫問卷\n- 建立 local storage context，避免頁面切換時需等候重新載入\n- 針對常見的兩狀態切換動畫，建立 hook 紀錄狀態、切換設定，縮短開發時間\n- 使用同一個 Repository 部署兩個網站，根據環境變數採用客製化元件或 rewrite / redirect\n- 部分頁面實作 i18n\n# 後台管理系統\n**Typescript (React, Next, Materialized UI Template)**\n- Serverless uploading to AWS S3: 單一檔案分段同步上傳\n- DFS 設定樹狀結構節點路徑\n# 嘗試使用 AWS Bedrock 建立客服機器人\n- 結合 AWS Lambda 針對使用者的指令執行特定方法\n- 學習 Prompt Engineering"
       }
     ]
