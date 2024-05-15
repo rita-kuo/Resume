@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface StepProps {
+export interface StepProps {
     title: string
     skill?: string[]
     image: string[]

@@ -1,0 +1,77 @@
+{
+  "image": "/ntpu.jpeg",
+  "title": "Bachelor of Information Engineering",
+  "school": "National Taipei University",
+  "project": {
+    "title": "Real-time Sports Event Virtual Dynamic Advertising System",
+    "subtitle": "Graduation Project (Python, OpenCV)",
+    "before": "/project-before.png",
+    "after": "/project-after.png",
+    "description": "Using real-time image processing techniques to replace advertising billboards in sports events with local advertisements, increasing economic benefits.",
+    "awards": [
+      {
+        "color": "text-yellow-500",
+        "title": "1st Place,\nNTPU IE Project Competition"
+      },
+      {
+        "color": "text-gray-400",
+        "title": "Silver Medal,\n2018 National College Software Competition"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Import Images",
+        "image": [
+          "/project-1.png"
+        ]
+      },
+      {
+        "title": "Preliminary Positioning",
+        "image": [
+          "/project-2.png"
+        ],
+        "skill": [
+          "Color Extraction"
+        ]
+      },
+      {
+        "title": "Noise Removal",
+        "image": [
+          "/project-3.png"
+        ],
+        "skill": [
+          "Morphology",
+          "Flood Fill"
+        ]
+      },
+      {
+        "title": "Confirm Billboard Position",
+        "image": [
+          "/project-4.png",
+          "/project-5.png"
+        ],
+        "skill": [
+          "Minimum Bounding Rectangle",
+          "CNN"
+        ]
+      },
+      {
+        "title": "Project Virtual Billboard",
+        "image": [
+          "/project-6.png",
+          "/project-7.png"
+        ],
+        "skill": [
+          "Perspective Transformation",
+          "Color Extraction"
+        ]
+      },
+      {
+        "title": "Completion",
+        "image": [
+          "/project-8.png"
+        ]
+      }
+    ]
+  }
+}

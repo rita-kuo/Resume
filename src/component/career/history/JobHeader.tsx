@@ -1,3 +1,5 @@
+'use client';
+
 import React, {useMemo, useRef} from "react";
 import WorkHistory from "@/model/workHistory";
 import {format} from "date-fns";

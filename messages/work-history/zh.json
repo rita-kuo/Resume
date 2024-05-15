@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "from": "2019-01-01T00:00:00.000Z",
+    "to": "2020-01-01T00:00:00.000Z",
+    "company": "Company A",
+    "detail": [
+      {
+        "title": "Software Engineer1",
+        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+      },
+      {
+        "title": "Software Engineer2",
+        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "from": "2020-01-01T00:00:00.000Z",
+    "company": "Company B",
+    "detail": [
+      {
+        "title": "Software Engineer3",
+        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+      },
+      {
+        "title": "Software Engineer4",
+        "description": "Developed a web application.\\n- Frontend\\n- Backend"
+      }
+    ]
+  }
+]

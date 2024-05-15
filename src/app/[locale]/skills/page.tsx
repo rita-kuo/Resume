@@ -1,5 +1,7 @@
 import {format} from "date-fns";
 import Image from "next/image";
+import {getData} from "@/service";
+import {BasePageProps} from "@/model/page";
 
 interface Skill {
     title: string
@@ -8,24 +10,10 @@ interface Skill {
     image: string
 }
 
-const skills: Skill[] = [{
-    title: "Azure Developer Associate",
-    from: new Date("2021-12-29"),
-    to: new Date("2023-12-30"),
-    image: "/AzureDeveloperAssociate.png"
-}, {
-    title: "Azure Fundamentals",
-    from: new Date("2020-3-14"),
-    image: "/AzureFundamentals.png"
-}, {
-    title: "TOEIC 930",
-    from: new Date("2022-12-18"),
-    image: "/toeic.png"
-}]
-
-const Page = () => {
+const Page = async ({params: {locale}}: BasePageProps) => {
+    const skills = await getData<Skill[]>('skills', locale)
     return <div className='space-y-4 divide-y-2 [&>*]:pt-4'>
-        {skills.map(skill => <div className='space-y-2'>
+        {skills?.map(skill => <div className='space-y-2'>
             <div className='flex flex-col md:flex-row md:items-end gap-x-4'>
                 <h2>{skill.title}</h2>
                 <span
