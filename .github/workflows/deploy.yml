@@ -34,8 +34,8 @@ jobs:
 
       - name: upload image
         id: upload-image
-        run: scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/"${{env.DOCKER_IMAGE}}"/"${{env.DOCKER_IMAGE}}.tar"
+        run: scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
 
       - name: deploy
         id: deploy
-        run: ssh -i key.pem ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} "cd /rita-resume && docker load -i ${{env.DOCKER_IMAGE}}.tar && docker run -d --network main_network --name ${{env.DOCKER_IMAGE}} -p 3002:3000 ${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
+        run: ssh -i key.pem "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}" "cd /rita-resume && docker load -i ${{env.DOCKER_IMAGE}}.tar && docker run -d --network main_network --name ${{env.DOCKER_IMAGE}} -p 3002:3000 ${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
