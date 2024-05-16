@@ -4,7 +4,7 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: 'resume',
+    basePath: '/resume',
     output: 'standalone',
 };
 
