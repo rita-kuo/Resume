@@ -10,6 +10,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: BritaD
     steps:
       - name: Checkout latest code
         uses: actions/checkout@v3
