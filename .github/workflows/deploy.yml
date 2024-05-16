@@ -30,7 +30,7 @@ jobs:
         id: setup-ssh
         run: |
           echo "${{secrets.SSH_KEY}}" > key.pem
-          chmod 600 key.der
+          chmod 600 key.pem
 
       - name: upload image
         id: upload-image
