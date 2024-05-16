@@ -27,13 +27,22 @@ jobs:
         run: docker save -o "${{env.DOCKER_IMAGE}}.tar" "${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
 
       - name: upload image
-        id: upload-image
-        run: |
-          echo $SSH_KEY > key.pem
-          chmod 600 key.pem
-          scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
-        env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "${{env.DOCKER_IMAGE}}.tar"
+          target: "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
+
+      #      - name: upload image
+      #        id: upload-image
+      #        run: |
+      #          echo $SSH_KEY > key.pem
+      #          chmod 600 key.pem
+      #          scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
+      #        env:
+      #          SSH_KEY: ${{ secrets.SSH_KEY }}
 
       - name: deploy
         id: deploy
