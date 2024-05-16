@@ -1,0 +1,43 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout latest code
+        uses: actions/checkout@v3
+
+      - name: define build version
+        id: default-version
+        run: echo "TAG_VERSION=${GITHUB_SHA}" >> $GITHUB_ENV
+
+      - name: build docker
+        id: build-docker
+        run: docker build -t "${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}" .
+
+      - name: save docker image
+        id: save-docker
+        run: docker save -o "${{env.DOCKER_IMAGE}}.tar" "${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
+
+      - name: create pem file
+        id: create-pem
+        run: |
+          echo "${{ secrets.SSH_KEY }}" > key.pem
+          chmod 600 key.pem
+
+      - name: upload image
+        id: upload-image
+        run: scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
+
+      - name: deploy
+        id: deploy
+        run: ssh -i key.pem "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}" "cd /rita-resume && docker load -i ${{env.DOCKER_IMAGE}}.tar && docker run -d --network main_network --name ${{env.DOCKER_IMAGE}} -p 3002:3000 ${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
+
