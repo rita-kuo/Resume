@@ -28,7 +28,9 @@ jobs:
 
       - name: setup ssh
         id: setup-ssh
-        run: echo "${{secrets.SSH_KEY}}" > key.der
+        run: |
+          echo "${{secrets.SSH_KEY}}" > key.der
+          chmod 600 key.der
 
       - name: upload image
         id: upload-image
