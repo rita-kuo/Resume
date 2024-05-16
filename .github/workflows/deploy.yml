@@ -6,6 +6,8 @@ on:
 env:
   DOCKER_IMAGE: resume-rita
   VERSION: 1.0
+  SSH_KEY: |
+    ${{ secrets.SSH_KEY }}
 
 jobs:
   build:
@@ -29,13 +31,13 @@ jobs:
       - name: upload image
         id: upload-image
         run: |
-          echo "${{ secrets.SSH_KEY }}" > key.pem
+          echo "${{ env.SSH_KEY }}" > key.pem
           chmod 600 key.pem
           scp -i key.pem "${{env.DOCKER_IMAGE}}.tar" "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:/${{env.DOCKER_IMAGE}}/${{env.DOCKER_IMAGE}}.tar"
 
       - name: deploy
         id: deploy
         run: |
-          echo "${{ secrets.SSH_KEY }}" > key.pem
+          echo "${{ env.SSH_KEY }}" > key.pem
           chmod 600 key.pem
           ssh -i key.pem "${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}" "cd /rita-resume && docker load -i ${{env.DOCKER_IMAGE}}.tar && docker run -d --network main_network --name ${{env.DOCKER_IMAGE}} -p 3002:3000 ${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}"
