@@ -5,7 +5,7 @@ on:
 
 env:
   DOCKER_IMAGE: resume-rita
-  VERSION: 1.0
+  VERSION: "1.0"
   TARGET_FOLDER: images
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
 
       - name: define build version
         id: default-version
-        run: echo "TAG_VERSION=${GITHUB_SHA}" >> $GITHUB_ENV
+        run: echo "TAG_VERSION=${GITHUB_RUN_ID}" >> $GITHUB_ENV
 
       - name: build docker
         id: build-docker
