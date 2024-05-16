@@ -1,23 +1,23 @@
-import { Inter } from "next/font/google";
-import "../globals.css";
-import React from "react";
+import { Inter } from 'next/font/google';
+import '../globals.css';
+import React from 'react';
 
-import { getMessages, getTranslations } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import Layout from "@/component/layout/Layout";
+import { getMessages, getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import Layout from '@/component/layout/Layout';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const generateMetadata = async (props: {
   params: { locale: string };
 }) => {
   const t = await getTranslations({
     locale: props.params.locale,
-    namespace: "Metadata",
+    namespace: 'Metadata',
   });
 
   return {
-    title: t("title"),
+    title: t('title'),
   };
 };
 

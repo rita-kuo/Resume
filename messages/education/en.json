@@ -21,56 +21,31 @@
     "steps": [
       {
         "title": "Import Images",
-        "image": [
-          "/project-1.png"
-        ]
+        "image": ["/project-1.png"]
       },
       {
         "title": "Preliminary Positioning",
-        "image": [
-          "/project-2.png"
-        ],
-        "skill": [
-          "Color Extraction"
-        ]
+        "image": ["/project-2.png"],
+        "skill": ["Color Extraction"]
       },
       {
         "title": "Noise Removal",
-        "image": [
-          "/project-3.png"
-        ],
-        "skill": [
-          "Morphology",
-          "Flood Fill"
-        ]
+        "image": ["/project-3.png"],
+        "skill": ["Morphology", "Flood Fill"]
       },
       {
         "title": "Confirm Billboard Position",
-        "image": [
-          "/project-4.png",
-          "/project-5.png"
-        ],
-        "skill": [
-          "Minimum Bounding Rectangle",
-          "CNN"
-        ]
+        "image": ["/project-4.png", "/project-5.png"],
+        "skill": ["Minimum Bounding Rectangle", "CNN"]
       },
       {
         "title": "Project Virtual Billboard",
-        "image": [
-          "/project-6.png",
-          "/project-7.png"
-        ],
-        "skill": [
-          "Perspective Transformation",
-          "Color Extraction"
-        ]
+        "image": ["/project-6.png", "/project-7.png"],
+        "skill": ["Perspective Transformation", "Color Extraction"]
       },
       {
         "title": "Completion",
-        "image": [
-          "/project-8.png"
-        ]
+        "image": ["/project-8.png"]
       }
     ]
   }

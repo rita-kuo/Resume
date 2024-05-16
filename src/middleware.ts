@@ -1,11 +1,11 @@
-import createMiddleware from "next-intl/middleware";
-import { NextRequest } from "next/server";
-import { locales } from "@/i18n";
+import createMiddleware from 'next-intl/middleware';
+import { NextRequest } from 'next/server';
+import { locales } from '@/i18n';
 
 export default function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname.replace(
-    new RegExp(`^/(${locales.join("|")})?`),
-    "",
+    new RegExp(`^/(${locales.join('|')})?`),
+    '',
   );
   if (!pathname) {
     req.nextUrl.pathname = `/work-history`;
@@ -16,11 +16,11 @@ export default function middleware(req: NextRequest) {
     locales,
 
     // Used when no locale matches
-    defaultLocale: "en",
+    defaultLocale: 'en',
   })(req);
 }
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(zh|en)/:path*"],
+  matcher: ['/', '/(zh|en)/:path*'],
 };

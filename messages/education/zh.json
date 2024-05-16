@@ -21,56 +21,31 @@
     "steps": [
       {
         "title": "匯入影像",
-        "image": [
-          "/project-1.png"
-        ]
+        "image": ["/project-1.png"]
       },
       {
         "title": "初步定位",
-        "image": [
-          "/project-2.png"
-        ],
-        "skill": [
-          "色彩提取"
-        ]
+        "image": ["/project-2.png"],
+        "skill": ["色彩提取"]
       },
       {
         "title": "雜訊濾除",
-        "image": [
-          "/project-3.png"
-        ],
-        "skill": [
-          "Morphology 形態學",
-          "Flood Fill漫水填充法"
-        ]
+        "image": ["/project-3.png"],
+        "skill": ["Morphology 形態學", "Flood Fill漫水填充法"]
       },
       {
         "title": "確認看板位置",
-        "image": [
-          "/project-4.png",
-          "/project-5.png"
-        ],
-        "skill": [
-          "最小外接矩形",
-          "CNN"
-        ]
+        "image": ["/project-4.png", "/project-5.png"],
+        "skill": ["最小外接矩形", "CNN"]
       },
       {
         "title": "投影虛擬看板",
-        "image": [
-          "/project-6.png",
-          "/project-7.png"
-        ],
-        "skill": [
-          "透視變換",
-          "色彩提取"
-        ]
+        "image": ["/project-6.png", "/project-7.png"],
+        "skill": ["透視變換", "色彩提取"]
       },
       {
         "title": "完成",
-        "image": [
-          "/project-8.png"
-        ]
+        "image": ["/project-8.png"]
       }
     ]
   }

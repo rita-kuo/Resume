@@ -1,7 +1,7 @@
-import React from "react";
-import JobHeader from "@/component/career/history/JobHeader";
-import WorkHistory from "@/model/workHistory";
-import JobContent from "@/component/career/history/JobContent";
+import React from 'react';
+import JobHeader from '@/component/career/history/JobHeader';
+import WorkHistory from '@/model/workHistory';
+import JobContent from '@/component/career/history/JobContent';
 
 const JobCollapse: React.FC<{ history: WorkHistory }> = (props) => {
   return (

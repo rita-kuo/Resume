@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useBreakPoint = () => {
-  const [device, setDevice] = useState("desktop");
+  const [device, setDevice] = useState('desktop');
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setDevice("mobile");
+        setDevice('mobile');
       } else {
-        setDevice("desktop");
+        setDevice('desktop');
       }
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return device;
 };
