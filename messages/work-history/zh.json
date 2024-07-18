@@ -32,7 +32,7 @@
         "title": "程式分析師",
         "from": "2020-08-01T00:00:00.000Z",
         "to": "2023-05-01T00:00:00.000Z",
-        "description": "# [iota C.ai 對話服務平台開發](https://www.gss.com.tw/iota)\n**TypeScript (React) | C# (.Net) | PostgreSQL & MS SQL Server | Azure ｜Jenkins**\n- 開發結構式問答設計模組，方便使用者基於結構化的資料的建立問答，同時針對提問者提供流程化的查詢結果。\n- 開發即時對話模組，實現真人透過機器人的身份進行即時線上客服。\n- 建立整合訓練機制，透過提升訓練資料管理及調教的便利性，以減少資訊不全所致的錯誤回覆，提升 NLU 30% 準確率。\n- 建立前端共用元件及基本功能專案，提升相關服務介面開發效率及畫面一致性。"
+        "description": "# [iota C.ai 對話服務平台開發](https://www.gss.com.tw/iota)\n**TypeScript (React) | C# (.Net) | Python（Flask） | PostgreSQL & MS SQL Server | Azure ｜Jenkins**\n- 開發結構式問答設計模組，方便使用者基於結構化的資料的建立問答，同時針對提問者提供流程化的查詢結果。\n- 開發即時對話模組，實現真人透過機器人的身份進行即時線上客服。\n- 建立整合訓練機制，透過提升訓練資料管理及調教的便利性，以減少資訊不全所致的錯誤回覆，提升 NLU 30% 準確率。\n- 建立前端共用元件及基本功能專案，提升相關服務介面開發效率及畫面一致性。\n- 建立服務介接 OpenAI GPT-3 及 Embedding API，讓使用者自行選擇欲使用之 AI 模組。"
       }
     ]
   },
