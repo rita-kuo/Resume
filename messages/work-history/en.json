@@ -44,7 +44,7 @@
       {
         "title": "AI Engineer",
         "from": "2024-06-01T00:00:00.000Z",
-        "description": "# LINE Customer Service Chat Bot Development\n**AWS Bedrock (Claude 3.5) | AWS SQS | Kotlin**\n- Developed LINE Bot using Kotlin with LINE SDK\n- Use AWS SQS to achieve real-time and scheduled notification functions triggered by various microservices\n- Used AWS Bedrock Agent with Knowledge Base (RAG) to create a natural language customer service bot"
+        "description": "# LINE Customer Service Chat Bot Development\n**AWS Bedrock (Claude 3.5) | AWS SQS | Kotlin**\n- Developed LINE Bot using Kotlin with LINE SDK\n- Use AWS SQS to achieve real-time and scheduled notification functions triggered by various microservices\n- Use AWS Bedrock Agent with Knowledge Base (RAG) to create a natural language customer service bot"
       },
       {
         "title": "Frontend Engineer",
