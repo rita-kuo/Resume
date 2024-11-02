@@ -42,6 +42,11 @@
     "company": "Jedi Software",
     "detail": [
       {
+        "title": "AI Engineer",
+        "from": "2024-06-01T00:00:00.000Z",
+        "description": "# LINE Customer Service Chat Bot Development\n**AWS Bedrock (Claude 3.5) | AWS SQS | Kotlin**\n- Developed LINE Bot using Kotlin with LINE SDK\n- Use AWS SQS to achieve real-time and scheduled notification functions triggered by various microservices\n- Used AWS Bedrock Agent with Knowledge Base (RAG) to create a natural language customer service bot"
+      },
+      {
         "title": "Software Engineer",
         "description": "# Job Responsibilities\n- Front-end web development\n- Definition of API specifications and partial database design\n- Discussion with UX designers to design processes\n- Some desktop UI design\n- Github Workflow CI/CD\n# [U19 Basketball League Official Website](https://u19.com/)\n# [Sinyi Basketball League Official Website](https://www.xbl.tw/)\n**Typescript (React, Next) | Tailwind | Framer Motion**\n- Introduced Design System to unify component styles\n- Refactored original code, extracted shared components, methods, and split files\n- Integrated Tap Pay for online payment for event registration\n- Used Google reCaptcha to prevent bots from filling out surveys\n- Established local storage context to avoid waiting for reload when switching pages\n- Created hooks for common two-state switching animations to record states and switch settings, reducing development time\n- Deployed two websites using the same Repository, adopting customized components or rewrite/redirect according to environment variables\n- Implemented i18n for some pages\n- Integrating Google Analytics 4 to track user behavior.\n# Backend Management System\n**Typescript (React, Next, Materialized UI Template)**\n- Serverless uploading to AWS S3: Single file segmented synchronous upload\n- Configure node path in a tree structure by using DFS\n# Attempted to use AWS Bedrock to build a customer service bot\n- Combined AWS Lambda to execute specific methods for user commands\n- Learn Prompt Engineering"
       }
