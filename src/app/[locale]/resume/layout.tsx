@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import '../globals.css';
+import '../../globals.css';
 import React from 'react';
 
 import { getMessages, getTranslations } from 'next-intl/server';
