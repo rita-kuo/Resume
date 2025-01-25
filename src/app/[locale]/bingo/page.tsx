@@ -165,6 +165,22 @@ const Bingo = () => {
             disabled={!init}
             className={complete ? 'hidden' : undefined}
             onClick={() => {
+              const cells = new Array(25).fill(0).map((_, index) => ({
+                value: (index + 1).toString(),
+              }));
+              for (let i = 0; i < 25; i++) {
+                const rand = Math.floor(Math.random() * (25 - i)) + i;
+                [cells[i], cells[rand]] = [cells[rand], cells[i]];
+              }
+              setValue('cells', cells);
+            }}
+          >
+            幫我填
+          </SecondaryButton>
+          <SecondaryButton
+            disabled={!init}
+            className={complete ? 'hidden' : undefined}
+            onClick={() => {
               reset();
               localStorage.removeItem('bingo');
             }}
