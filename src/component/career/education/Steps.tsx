@@ -31,6 +31,7 @@ const Step: React.FC<StepProps> = (props) => {
             src={`/images${src}`}
             alt="project-1"
             className="rounded"
+            style={{ imageOrientation: 'none' }}
             width={1920}
             height={1080}
           />
