@@ -7,9 +7,12 @@
     "name": "Rita Kuo"
   },
   "Title": {
-    "work-history": "Work History",
-    "education": "Education",
-    "skills": "Skills"
+    "bingo": "Bingo",
+    "resume": {
+      "work-history": "Work History",
+      "education": "Education",
+      "skills": "Skills"
+    }
   },
   "Education": {
     "workflow": "Workflow"

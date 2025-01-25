@@ -4,7 +4,6 @@ import React from 'react';
 
 import { getMessages, getTranslations } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import Layout from '@/component/layout/Layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,9 +31,7 @@ export default async function RootLayout({
   return (
     <html lang={params.locale}>
       <NextIntlClientProvider messages={messages}>
-        <body className={`min-h-screen ${inter.className}`}>
-          <Layout>{children}</Layout>
-        </body>
+        <body className={`min-h-screen ${inter.className}`}>{children}</body>
       </NextIntlClientProvider>
     </html>
   );

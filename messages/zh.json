@@ -7,9 +7,12 @@
     "name": "郭庭恩"
   },
   "Title": {
-    "work-history": "工作經歷",
-    "education": "學歷",
-    "skills": "技能"
+    "bingo": "Bingo",
+    "resume": {
+      "work-history": "工作經歷",
+      "education": "學歷",
+      "skills": "技能"
+    }
   },
   "Education": {
     "workflow": "運作流程"

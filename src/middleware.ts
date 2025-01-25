@@ -7,8 +7,8 @@ export default function middleware(req: NextRequest) {
     new RegExp(`^/(${locales.join('|')})?`),
     '',
   );
-  if (!pathname) {
-    req.nextUrl.pathname = `/work-history`;
+  if (!pathname || pathname === '/resume') {
+    req.nextUrl.pathname = `/resume/work-history`;
   }
 
   return createMiddleware({
@@ -21,6 +21,5 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(zh|en)/:path*'],
+  matcher: ['/((?!api|_next/static|_next/image|images|favicon.ico).*)'],
 };
