@@ -20,7 +20,7 @@ jobs:
 
       - name: build docker
         id: build-docker
-        run: docker build -t --load "${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}" .
+        run: docker build --load -t"${{env.DOCKER_IMAGE}}:${{env.VERSION}}.${{env.TAG_VERSION}}" .
 
       - name: stop old container if exist
         run: |
